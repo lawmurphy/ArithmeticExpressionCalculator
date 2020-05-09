@@ -31,4 +31,5 @@
     <string name="open">(</string>
     <string name="close">)</string>
     <string name="divide">/</string>
+    <string name="backspace">backspace</string>
 </resources>
