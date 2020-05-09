@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#000"
     tools:context=".MainActivity">
 
 
     <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
-        android:layout_height="310dp"
+        android:layout_height="220dp"
         android:background="#000"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +82,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="38dp"
             android:text=""
             android:textColor="#fff"
             android:textSize="20sp"
@@ -124,7 +125,7 @@
 
         <Button
             android:id="@+id/pointButton"
-            android:layout_width="72dp"
+            android:layout_width="66dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num9"
             android:layout_marginStart="8dp"
@@ -138,7 +139,7 @@
 
         <Button
             android:id="@+id/closeBracket"
-            android:layout_width="72dp"
+            android:layout_width="66dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num8"
             android:layout_marginStart="8dp"
@@ -151,7 +152,7 @@
 
         <Button
             android:id="@+id/openBracket"
-            android:layout_width="72dp"
+            android:layout_width="66dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num7"
             android:layout_alignParentStart="true"
@@ -164,7 +165,7 @@
 
         <Button
             android:id="@+id/num7"
-            android:layout_width="98.6666dp"
+            android:layout_width="90.6666dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num4"
             android:layout_alignParentStart="true"
@@ -180,7 +181,7 @@
 
         <Button
             android:id="@+id/num8"
-            android:layout_width="98.6666dp"
+            android:layout_width="90.6666dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num5"
             android:layout_marginStart="8dp"
@@ -196,7 +197,7 @@
 
         <Button
             android:id="@+id/num9"
-            android:layout_width="98.6666dp"
+            android:layout_width="90.6666dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num6"
             android:layout_marginStart="8dp"
@@ -212,7 +213,7 @@
 
         <Button
             android:id="@+id/num6"
-            android:layout_width="98.6666dp"
+            android:layout_width="90.6666dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num3"
             android:layout_marginStart="8dp"
@@ -228,7 +229,7 @@
 
         <Button
             android:id="@+id/num0"
-            android:layout_width="312dp"
+            android:layout_width="288dp"
             android:layout_height="62dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
@@ -244,7 +245,7 @@
 
         <Button
             android:id="@+id/num5"
-            android:layout_width="98.6666dp"
+            android:layout_width="90.6666dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num2"
             android:layout_marginStart="8dp"
@@ -260,7 +261,7 @@
 
         <Button
             android:id="@+id/num2"
-            android:layout_width="98.6666dp"
+            android:layout_width="90.6666dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num0"
             android:layout_marginStart="8dp"
@@ -276,7 +277,7 @@
 
         <Button
             android:id="@+id/num1"
-            android:layout_width="98.6666dp"
+            android:layout_width="90.6666dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num0"
             android:layout_alignParentStart="true"
@@ -292,7 +293,7 @@
 
         <Button
             android:id="@+id/buttonClear"
-            android:layout_width="152dp"
+            android:layout_width="140dp"
             android:layout_height="62dp"
             android:layout_above="@+id/openBracket"
             android:layout_alignParentStart="true"
@@ -307,7 +308,7 @@
 
         <Button
             android:id="@+id/buttonDegree"
-            android:layout_width="76dp"
+            android:layout_width="100dp"
             android:layout_height="54dp"
             android:layout_above="@+id/buttonMultiply"
             android:layout_alignParentEnd="true"
@@ -360,7 +361,7 @@
 
         <Button
             android:id="@+id/buttonUnar"
-            android:layout_width="72dp"
+            android:layout_width="66dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num9"
             android:layout_marginStart="8dp"
@@ -376,7 +377,7 @@
 
         <Button
             android:id="@+id/num4"
-            android:layout_width="98.6666dp"
+            android:layout_width="90.6666dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num1"
             android:layout_alignParentStart="true"
@@ -428,7 +429,7 @@
 
         <Button
             android:id="@+id/num3"
-            android:layout_width="98.6666dp"
+            android:layout_width="90.6666dp"
             android:layout_height="62dp"
             android:layout_above="@+id/num0"
             android:layout_marginStart="8dp"
@@ -444,7 +445,7 @@
 
         <Button
             android:id="@+id/divide"
-            android:layout_width="76dp"
+            android:layout_width="100dp"
             android:layout_height="54dp"
             android:layout_above="@+id/buttonDegree"
             android:layout_alignParentEnd="true"
@@ -460,7 +461,7 @@
 
         <Button
             android:id="@+id/buttonBackspace"
-            android:layout_width="152dp"
+            android:layout_width="140dp"
             android:layout_height="62dp"
             android:layout_above="@+id/buttonUnar"
             android:layout_marginStart="8dp"
