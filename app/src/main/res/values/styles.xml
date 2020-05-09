@@ -8,10 +8,36 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="mybuttonstyle">
-        <item name="android:textSize">42sp</item>
+    <style name="buttonLightStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:onClick">onClickButtons</item>
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">62dp</item>
     </style>
 
+    <style name="buttonNumberStyle">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:onClick">onClickButtons</item>
+        <item name="android:layout_width">90.6666dp</item>
+        <item name="android:layout_height">62dp</item>
+    </style>
+
+    <style name="buttonOperationStyle">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:onClick">onClickButtons</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">54dp</item>
+    </style>
 
 
 </resources>

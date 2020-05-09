@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void onClickButtons(View view)  {
+
             if (counter == 0) {
                 inputExpression.setText("");
                 resultString.setText("");
