@@ -1,4 +1,4 @@
-package shirokov.games.arithmeticexpressioncalculator;
+package shirokov.apps.arithmeticexpressioncalculator;
 
 import org.junit.Test;
 

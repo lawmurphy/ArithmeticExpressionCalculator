@@ -1,4 +1,4 @@
-package shirokov.games.arithmeticexpressioncalculator;
+package shirokov.apps.arithmeticexpressioncalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -51,7 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 inputExpression.setText(currentInputString + '!');
                 counter = 1;
             } else if (s.equals("backspace")) {
-                inputExpression.setText(currentInputString.substring(0,currentInputString.length()-1));
+                try {
+                    inputExpression.setText(currentInputString.substring(0, currentInputString.length() - 1));
+                } catch (StringIndexOutOfBoundsException e) { // В случае, если пытаемся удалить последний символ пустой строки
+
+                }
             } else if (s.equals("=")) {
                 try {
                     String RPNString = Calculator.expressionToRPN(currentInputString);

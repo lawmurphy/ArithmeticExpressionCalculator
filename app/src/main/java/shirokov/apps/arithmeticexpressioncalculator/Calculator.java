@@ -1,7 +1,6 @@
-package shirokov.games.arithmeticexpressioncalculator;
+package shirokov.apps.arithmeticexpressioncalculator;
 
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
