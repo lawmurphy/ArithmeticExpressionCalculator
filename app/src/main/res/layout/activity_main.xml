@@ -130,7 +130,7 @@
             android:layout_width="66dp"
             android:layout_above="@+id/num9"
             android:layout_toEndOf="@+id/buttonUnar"
-            android:background="@drawable/rounded"
+            android:background="@drawable/changeable_rounded"
             android:text="@string/dot"
             android:textSize="34sp" />
 
@@ -140,7 +140,7 @@
             android:layout_width="66dp"
             android:layout_above="@+id/num8"
             android:layout_toEndOf="@+id/openBracket"
-            android:background="@drawable/rounded"
+            android:background="@drawable/changeable_rounded"
             android:text="@string/close" />
 
         <Button
@@ -149,98 +149,83 @@
             android:layout_width="66dp"
             android:layout_above="@+id/num7"
             android:layout_alignParentStart="true"
-            android:background="@drawable/rounded"
+            android:background="@drawable/changeable_rounded"
             android:text="@string/open" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/num7"
+            style="@style/buttonNumberStyle"
             android:layout_above="@+id/num4"
             android:layout_alignParentStart="true"
-            android:background="@drawable/rounded"
-            android:text="@string/seven"
-            app:layout_constraintStart_toEndOf="@+id/num5"
-            app:layout_constraintTop_toBottomOf="@+id/num4" />
+            android:background="@drawable/changeable_rounded"
+            android:text="@string/seven" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/num8"
+            style="@style/buttonNumberStyle"
             android:layout_above="@+id/num5"
             android:layout_toEndOf="@+id/num7"
-            android:background="@drawable/rounded"
-            android:text="@string/eight"
-            app:layout_constraintStart_toEndOf="@+id/num2"
-            app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+            android:background="@drawable/changeable_rounded"
+            android:text="@string/eight" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/num9"
+            style="@style/buttonNumberStyle"
             android:layout_above="@+id/num6"
             android:layout_toEndOf="@+id/num8"
-            android:background="@drawable/rounded"
-            android:text="@string/nine"
-            app:layout_constraintStart_toEndOf="@+id/num1"
-            app:layout_constraintTop_toBottomOf="@+id/num5" />
+            android:background="@drawable/changeable_rounded"
+            android:text="@string/nine" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/num6"
+            style="@style/buttonNumberStyle"
             android:layout_above="@+id/num3"
             android:layout_toEndOf="@+id/num5"
-            android:background="@drawable/rounded"
-            android:text="@string/six"
-            app:layout_constraintStart_toEndOf="@+id/num9"
-            app:layout_constraintTop_toBottomOf="@+id/num7" />
+            android:background="@drawable/changeable_rounded"
+            android:text="@string/six" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/num0"
+            style="@style/buttonNumberStyle"
             android:layout_width="288dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:background="@drawable/rounded"
+            android:background="@drawable/changeable_rounded"
             android:text="@string/zero"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/num9" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/num5"
+            style="@style/buttonNumberStyle"
             android:layout_above="@+id/num2"
             android:layout_toEndOf="@+id/num4"
-            android:background="@drawable/rounded"
-            android:text="@string/five"
-            app:layout_constraintStart_toEndOf="@+id/num3"
-            app:layout_constraintTop_toBottomOf="@+id/num8" />
+            android:background="@drawable/changeable_rounded"
+            android:text="@string/five" />
 
         <Button
             android:id="@+id/num2"
             style="@style/buttonNumberStyle"
             android:layout_above="@+id/num0"
             android:layout_toEndOf="@+id/num1"
-            android:background="@drawable/rounded"
-            android:text="@string/two"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonClear" />
+            android:background="@drawable/changeable_rounded"
+            android:text="@string/two" />
 
         <Button
             android:id="@+id/num1"
             style="@style/buttonNumberStyle"
             android:layout_above="@+id/num0"
             android:layout_alignParentStart="true"
-            android:background="@drawable/rounded"
+            android:background="@drawable/changeable_rounded"
             android:text="@string/one"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/num3" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/buttonClear"
             style="@style/buttonLightStyle"
             android:layout_above="@+id/openBracket"
             android:layout_alignParentStart="true"
-            android:background="@drawable/rounded_light"
-            android:text="@string/clear"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:background="@drawable/changeable_rounded_light"
+            android:text="@string/clear" />
 
         <Button
             style="@style/buttonOperationStyle"
@@ -248,84 +233,72 @@
             android:layout_above="@+id/buttonMultiply"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/pointButton"
-            android:background="@drawable/rounded_blue"
+            android:background="@drawable/changeable_rounded_blue"
             android:text="@string/degree" />
 
         <Button
-            style="@style/buttonOperationStyle"
             android:id="@+id/buttonMultiply"
+            style="@style/buttonOperationStyle"
             android:layout_above="@+id/buttonMinus"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/num9"
-            android:background="@drawable/rounded_blue"
-            android:text="@string/multiply"
-            app:layout_constraintStart_toEndOf="@+id/num4"
-            app:layout_constraintTop_toBottomOf="@+id/buttonDegree" />
+            android:background="@drawable/changeable_rounded_blue"
+            android:text="@string/symbolX" />
 
         <Button
-            style="@style/buttonOperationStyle"
             android:id="@+id/buttonMinus"
+            style="@style/buttonOperationStyle"
             android:layout_above="@+id/plusButton"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/num6"
-            android:background="@drawable/rounded_blue"
-            android:text="@string/minus"
-            app:layout_constraintStart_toEndOf="@+id/num7"
-            app:layout_constraintTop_toBottomOf="@+id/buttonMultiply" />
+            android:background="@drawable/changeable_rounded_blue"
+            android:text="@string/minus" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/buttonUnar"
+            style="@style/buttonNumberStyle"
             android:layout_width="66dp"
             android:layout_above="@+id/num9"
+            android:background="@drawable/changeable_rounded"
             android:layout_toEndOf="@+id/closeBracket"
-            android:background="@drawable/rounded"
             android:text="@string/unarMinus"
             android:textSize="10sp"
-            app:layout_constraintStart_toEndOf="@+id/buttonClear"
             tools:ignore="SmallSp" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/num4"
+            style="@style/buttonNumberStyle"
             android:layout_above="@+id/num1"
             android:layout_alignParentStart="true"
-            android:background="@drawable/rounded"
-            android:text="@string/four"
-            app:layout_constraintStart_toEndOf="@+id/num8" />
+            android:background="@drawable/changeable_rounded"
+            android:text="@string/four" />
 
         <Button
-            style="@style/buttonOperationStyle"
             android:id="@+id/plusButton"
+            style="@style/buttonOperationStyle"
             android:layout_above="@+id/buttonEquals"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/num3"
-            android:background="@drawable/rounded_blue"
-            android:text="@string/plus"
-            app:layout_constraintStart_toEndOf="@+id/num6"
-            app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
+            android:background="@drawable/changeable_rounded_blue"
+            android:text="@string/plus" />
 
         <Button
-            style="@style/buttonOperationStyle"
             android:id="@+id/buttonEquals"
+            style="@style/buttonOperationStyle"
             android:layout_height="102dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_toEndOf="@+id/num0"
-            android:background="@drawable/rounded_blue"
-            android:text="@string/equals"
-            app:layout_constraintStart_toEndOf="@+id/num0"
-            app:layout_constraintTop_toBottomOf="@+id/plusButton" />
+            android:background="@drawable/changeable_rounded_blue"
+            android:text="@string/equals" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/num3"
+            style="@style/buttonNumberStyle"
             android:layout_above="@+id/num0"
             android:layout_toEndOf="@+id/num2"
-            android:background="@drawable/rounded"
-            android:text="@string/three"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/num2" />
+            android:background="@drawable/changeable_rounded"
+            android:text="@string/three" />
 
         <Button
             style="@style/buttonOperationStyle"
@@ -333,15 +306,15 @@
             android:layout_above="@+id/buttonDegree"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/buttonBackspace"
-            android:background="@drawable/rounded_blue"
+            android:background="@drawable/changeable_rounded_blue"
             android:text="@string/divide" />
 
         <Button
-            style="@style/buttonLightStyle"
             android:id="@+id/buttonBackspace"
+            style="@style/buttonLightStyle"
             android:layout_above="@+id/buttonUnar"
             android:layout_toEndOf="@+id/buttonClear"
-            android:background="@drawable/rounded_light"
+            android:background="@drawable/changeable_rounded_light"
             android:text="@string/backspace" />
 
     </RelativeLayout>

@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -29,7 +31,11 @@ public class MainActivity extends AppCompatActivity {
         resultString = findViewById(R.id.resultString);
         rpnResultString = findViewById(R.id.rpnResultString);
 
+
+
+
     }
+
 
     @SuppressLint("SetTextI18n")
     public void onClickButtons(View view)  {
@@ -44,21 +50,25 @@ public class MainActivity extends AppCompatActivity {
             String s = button.getText().toString();
             String currentInputString = inputExpression.getText().toString();
 
-            if (s.equals("clear")) {
+        switch (s) {
+            case "clear":
                 inputExpression.setText("");
-            } else if (s.equals("x")) {
-                inputExpression.setText(currentInputString + '*');
-                counter = 1;
-            } else if (s.equals("унарный минус")) {
+                break;
+
+            case "унарный минус":
                 inputExpression.setText(currentInputString + '!');
                 counter = 1;
-            } else if (s.equals("backspace")) {
+                break;
+
+            case "backspace":
                 try {
                     inputExpression.setText(currentInputString.substring(0, currentInputString.length() - 1));
                 } catch (StringIndexOutOfBoundsException e) { // В случае, если пытаемся удалить последний символ пустой строки
 
                 }
-            } else if (s.equals("=")) {
+                break;
+
+            case "=":
                 try {
                     String RPNString = Calculator.expressionToRPN(currentInputString);
                     resultString.setText(String.valueOf(Calculator.RPNtoAnswer(RPNString)));
@@ -69,12 +79,16 @@ public class MainActivity extends AppCompatActivity {
                         | NumberFormatException e) {
                     inputExpression.setText("Неверно задано выражение!");
                 }
-                    counter = 0;
-            } else {
+                counter = 0;
+                break;
+
+            default:
                 inputExpression.setText(currentInputString + s);
                 counter = 1;
-            }
+                break;
         }
+
+    }
 
 
 
