@@ -8,7 +8,6 @@ import java.util.Stack;
 // В КАЧЕСТВЕ ЛЮБОГО КОРНЯ ИСПОЛЬЗУЕМ a^(b/c)
 
 class Calculator {
-// 5+(!(8-3))
 
     static String expressionToRPN(String expression) {
         StringBuilder current = new StringBuilder();  // Строка польской нотации (здесь будут
