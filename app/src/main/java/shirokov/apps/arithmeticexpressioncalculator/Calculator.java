@@ -74,7 +74,7 @@ class Calculator {
 
                 if (getPriority(rpn.charAt(i)) > 1) {
 
-                    if (rpn.charAt(i) == '!') {
+                    if (rpn.charAt(i) == '⁃') {
                         stack.push(-stack.pop());
                         continue;
                     }
@@ -107,7 +107,7 @@ class Calculator {
         switch (token) {
             case '^':
                 return 5;
-            case '!':
+            case '⁃':
                 return 4;
             case '*':
             case 'x':

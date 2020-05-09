@@ -1,62 +1,54 @@
 package shirokov.apps.arithmeticexpressioncalculator;
-
+// Подгружаем необходимые классы
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import java.util.EmptyStackException;
 
 public class MainActivity extends AppCompatActivity {
 
-    public TextView inputExpression;
-    public TextView resultString;
-    public TextView rpnResultString;
-    public int counter = 1;
+    public TextView inputExpression;  // Объявляем 3 объекта класса TextView. inputExpression будет строкой ввода пользователя
+    public TextView resultString;     // resultString для строки с ответом
+    public TextView rpnResultString;  // rpnResultString для строки с полученной обратной польской записью
+    public int counter = 1;   // Счетчик
 
     @SuppressLint("SourceLockedOrientationActivity")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {  // Метод, который вызывается при открытии приложения
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setContentView(R.layout.activity_main);  // Устанавливаем для отображения activity_main.xml
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);  // Отключаем возможность поворота экрана
 
-        inputExpression = findViewById(R.id.inputString);
-        resultString = findViewById(R.id.resultString);
+        inputExpression = findViewById(R.id.inputString);  // Связываем нашу TextView переменную с элементом с id inputString (в activity_main)
+        resultString = findViewById(R.id.resultString);   // То же самое делаем с остальными переменными
         rpnResultString = findViewById(R.id.rpnResultString);
-
-
-
-
     }
 
-
     @SuppressLint("SetTextI18n")
-    public void onClickButtons(View view)  {
+    public void onClickButtons(View view)  {  // Метод, который будет выполняться, если нажимается любая кнопка
 
-            if (counter == 0) {
+            if (counter == 0) {  // Если счетчик равен 0 - то мы очищаем строки из всех элементов
                 inputExpression.setText("");
                 resultString.setText("");
                 rpnResultString.setText("");
             }
 
-            Button button = (Button) view;
-            String s = button.getText().toString();
-            String currentInputString = inputExpression.getText().toString();
+            Button button = (Button) view;   // Даункастим до Button объект view, чтобы присвоить переменной класса Button
+            String s = button.getText().toString(); // Получаем текст нажатой кнопки и кладем в переменную s
+            String currentInputString = inputExpression.getText().toString();  // Получаем текущую строку из элемента inputExpression
 
-        switch (s) {
-            case "clear":
-                inputExpression.setText("");
-                break;
+        switch (s) {  //  В зависимости от того, какой у кнопки текст, совершаем различные операции
+            case "clear":   // В случае если текст является "clear"
+                inputExpression.setText("");  // Логично, что стираем строку введенную пользователем
+                break;  // Дальше метод не выполняется
 
             case "унарный минус":
-                inputExpression.setText(currentInputString + '!');
+                inputExpression.setText(currentInputString + '⁃'); //
                 counter = 1;
                 break;
 
