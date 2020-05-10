@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     public void onClickButtons(View view)  {  // Метод, который будет выполняться, если нажимается любая кнопка
 
-            if (counter == 0) {  // Если счетчик равен 0 - то мы очищаем строки из всех элементов
+            if (counter == 0) {  // Если счетчик был сброшен и теперь равен 0 - то мы очищаем строки из всех элементов
                 inputExpression.setText("");
                 resultString.setText("");
                 rpnResultString.setText("");
@@ -47,34 +47,34 @@ public class MainActivity extends AppCompatActivity {
                 inputExpression.setText("");  // Логично, что стираем строку введенную пользователем
                 break;  // Дальше метод не выполняется
 
-            case "унарный минус":
-                inputExpression.setText(currentInputString + '⁃'); //
-                counter = 1;
+            case "унарный минус":  // Здесь в качестве унарного минуса будет "жирный" минус, чтобы программа смогла отличить
+                inputExpression.setText(currentInputString + '⁃');
+                counter = 1;  // Счетчик меняем на 1 - означает, что пользователь еще не получил ответ
                 break;
 
             case "backspace":
-                try {
+                try {    // Здесь мы с помощью метода substring у строки "отрезаем" последний символ
                     inputExpression.setText(currentInputString.substring(0, currentInputString.length() - 1));
-                } catch (StringIndexOutOfBoundsException e) { // В случае, если пытаемся удалить последний символ пустой строки
-
+                } catch (StringIndexOutOfBoundsException e) {
+                    // В случае, если пытаемся удалить последний символ пустой строки ловится исключение
                 }
                 break;
 
-            case "=":
-                try {
+            case "=":  // Если пользователь нажимает на кнопку =
+                try {  // То вычисляется ОПН и сам ответ и вставляется в строку
                     String RPNString = Calculator.expressionToRPN(currentInputString);
                     resultString.setText(String.valueOf(Calculator.RPNtoAnswer(RPNString)));
                     rpnResultString.setText(RPNString);
-                } catch (EmptyStackException
+                } catch (EmptyStackException  // Если ловим исключение - то в строке отображается надпись ниже
                         | ArrayIndexOutOfBoundsException
                         | StringIndexOutOfBoundsException
                         | NumberFormatException e) {
                     inputExpression.setText("Неверно задано выражение!");
                 }
-                counter = 0;
+                counter = 0;   // Сбрасываем счетчик
                 break;
 
-            default:
+            default:   // В любом другом случае просто прибавляем оператор/операнд к текущей строке
                 inputExpression.setText(currentInputString + s);
                 counter = 1;
                 break;
