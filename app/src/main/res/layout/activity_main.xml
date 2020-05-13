@@ -125,9 +125,9 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/pointButton"
-            android:layout_width="66dp"
+            style="@style/buttonNumberStyle"
+            android:layout_width="61.5dp"
             android:layout_above="@+id/num9"
             android:layout_toEndOf="@+id/buttonUnar"
             android:background="@drawable/changeable_rounded"
@@ -135,18 +135,18 @@
             android:textSize="34sp" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/closeBracket"
-            android:layout_width="66dp"
+            style="@style/buttonNumberStyle"
+            android:layout_width="61.5dp"
             android:layout_above="@+id/num8"
             android:layout_toEndOf="@+id/openBracket"
             android:background="@drawable/changeable_rounded"
             android:text="@string/close" />
 
         <Button
-            style="@style/buttonNumberStyle"
             android:id="@+id/openBracket"
-            android:layout_width="66dp"
+            style="@style/buttonNumberStyle"
+            android:layout_width="61.5dp"
             android:layout_above="@+id/num7"
             android:layout_alignParentStart="true"
             android:background="@drawable/changeable_rounded"
@@ -187,7 +187,7 @@
         <Button
             android:id="@+id/num0"
             style="@style/buttonNumberStyle"
-            android:layout_width="288dp"
+            android:layout_width="270dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:background="@drawable/changeable_rounded"
@@ -228,8 +228,8 @@
             android:text="@string/clear" />
 
         <Button
-            style="@style/buttonOperationStyle"
             android:id="@+id/buttonDegree"
+            style="@style/buttonOperationStyle"
             android:layout_above="@+id/buttonMultiply"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/pointButton"
@@ -257,10 +257,10 @@
         <Button
             android:id="@+id/buttonUnar"
             style="@style/buttonNumberStyle"
-            android:layout_width="66dp"
+            android:layout_width="61.5dp"
             android:layout_above="@+id/num9"
-            android:background="@drawable/changeable_rounded"
             android:layout_toEndOf="@+id/closeBracket"
+            android:background="@drawable/changeable_rounded"
             android:text="@string/unarMinus"
             android:textSize="10sp"
             tools:ignore="SmallSp" />
@@ -301,8 +301,8 @@
             android:text="@string/three" />
 
         <Button
-            style="@style/buttonOperationStyle"
             android:id="@+id/divide"
+            style="@style/buttonOperationStyle"
             android:layout_above="@+id/buttonDegree"
             android:layout_alignParentEnd="true"
             android:layout_toEndOf="@+id/buttonBackspace"
